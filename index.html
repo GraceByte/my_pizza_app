@@ -1,0 +1,23 @@
+<html ng-app="pizzaApp">
+<head>
+	<meta charset="utf-8">
+	<title>Pizza Restaurant Finder</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body ng-controller="PizzaListController">
+  <label>Search: <input ng-model="searchText"></label>
+  <div>
+  	<a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">Name</a>
+  	<a href="#" ng-click="sortType = 'price'; sortReverse = !sortReverse">Price</a>
+  </div>
+  <ul>
+    <li ng-repeat="pizza in pizzas | filter:searchText | orderBy:sortType:sortReverse">
+      <span>{{pizza.name}}</span>
+      <p>{{pizza.snippet}}</p>
+      <p >{{pizza.price | currency}}</p>
+    </li>
+  </ul>
+
+</body>
+</html>

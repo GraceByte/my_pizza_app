@@ -1,0 +1,13 @@
+, {
+    name: 'Papa Gino\'s',
+    snippet: 'The Next, Next Generation pizza table.',
+    price: 120
+  }, {
+    name: 'Pizza Hut',
+    snippet: 'The Next, Next pizza slice.',
+    price: 1200
+  }, {
+    name: 'Domino\'s',
+    snippet: 'Gimme dat pizza, bitch.',
+    price: 10002
+  }
